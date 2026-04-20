@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet"href="admission.css">
+</head>
+<body>
+  <section class="admission" id="admission">
+    <p class="admission-eyebrow">Admissions</p>
+    <h2>How to <span>Apply</span></h2>
+    <p class="admission-sub">We welcome students who are eager to learn and grow. Follow these simple steps to begin your journey with us.</p>
+    <div class="admission-steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Fill Application Form</h3>
+        <p>Complete our online application form with your details and previous school information.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Submit Documents</h3>
+        <p>Provide transcripts, certificates, and any other necessary documents for review.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Interview & Assessment</h3>
+        <p>Attend a brief interview or assessment to evaluate your readiness for our programs.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Confirmation & Enrollment</h3>
+        <p>Receive your acceptance letter and complete enrollment by paying the required fees.</p>
+      </div>
+    </div>
+    <a href="#apply" class="btn-apply">Apply Now →</a>
+  </section>
+  <div class="section-divider"></div>
+  <section class="apply" id="apply">
+    <p class="apply-eyebrow">Get Started</p>
+    <h2>Apply <span>Now</span></h2>
+    <p class="apply-sub">Fill in the details below and we'll get back to you shortly.</p>
+    <form class="apply-form" id="applyForm" novalidate>
+      <div class="form-progress">
+        <div class="progress-step active" id="p1"></div>
+        <div class="progress-step" id="p2"></div>
+        <div class="progress-step" id="p3"></div>
+        <span class="progress-label">Step <span id="stepCount">1</span> of 3</span>
+      </div>
+      <div class="form-group">
+        <label for="name">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Full Name
+        </label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <input type="text" id="name" placeholder="Enter student's full name" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="classLevel">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Child's Class
+        </label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <select id="classLevel" required>
+            <option value="" disabled selected>Select a class</option>
+            <optgroup label="Senior Secondary">
+              <option>SSS 1</option>
+              <option>SSS 2</option>
+              <option>SSS 3</option>
+            </optgroup>
+            <optgroup label="Junior Secondary">
+              <option>JSS 1</option>
+              <option>JSS 2</option>
+              <option>JSS 3</option>
+            </optgroup>
+          </select>
+          <svg class="select-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          Parent's Email
+        </label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          <input type="email" id="email" placeholder="parent@example.com" required/>
+        </div>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="consent" required/>
+        <label for="consent">I agree that the information provided is accurate and consent to being contacted regarding this application. <span>Privacy Policy</span></label>
+      </div>
+      <button type="submit" class="form-submit">
+        Submit Application
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <div class="success-message" id="successMsg">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Application Received!</h3>
+        <p>Thank you for applying. We'll review your details and reach out via email within 2–3 business days.</p>
+      </div>
+    </form>
+    <div class="status-bar">
+      <div class="status-dot"></div>
+      <span class="status-text">Admissions currently open</span>
+    </div>
+  </section>
+  <script src="admission.js"></script>
+</body>
+</html>
